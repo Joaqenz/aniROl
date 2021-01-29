@@ -1,21 +1,94 @@
+*{
+    font-family: 'Montserrat', sans-serif;
+}
 :root{
     --var-background: #17222B;
+    --var-primaryColor: #FFC236;
 }
 body{
     background-color: var(--var-background);
 }
+.imgBackground{
+    position: absolute;
+    mix-blend-mode: color-dodge;
+    pointer-events: none;
+    z-index: 0;
+}
 .bodyContainer{
+    overflow: hidden;
+    position: relative;
     display: flex;
     flex-direction: column;
     width: 100%;
-    height: 3664px;
+    height: 3664px; 
     background-color: var(--var-background);
 }
 .headerContainer{
+    z-index: 1;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
     height: 100px;
     width: 100%;
-    background-color: rgba(23,34,43,0.7);
+    background-color: rgba(0, 0, 0, 0.2);
 }
-.imgBackground{
-    mix-blend-mode: color-dodge;
+.logoContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 250px;
+    height: 100%;
+}
+.rightContainer{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+    width: 1670px;
+}
+.dataContainer{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 50px;
+    height: 100%;
+    width: 400px;
+}
+.dataItem{
+    font-size: 18px;
+    font-weight: 700;
+    color: white;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.dataItem i{
+    padding-left: 13px;
+}
+
+.fa-check-circle{
+    color: #33FF00;
+}
+.playersOn{
+    color: var(--var-primaryColor);
+}
+.linksContainer{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding-right: 125px;
+    height: 100%;
+    width: auto;
+}
+.linkPosition{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 710px;
+}
+.links{
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 700;
+    color: white;
 }
