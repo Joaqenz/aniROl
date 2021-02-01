@@ -4,6 +4,7 @@
 :root{
     --var-background: #17222B;
     --var-primaryColor: #FFC236;
+    --var-transparent: rgba(0, 0, 0, 0.3);
 }
 body{
     background-color: var(--var-background);
@@ -23,6 +24,8 @@ body{
     height: 3664px; 
     background-color: var(--var-background);
 }
+
+/** HEADER **/
 .headerContainer{
     z-index: 1;
     display: flex;
@@ -30,7 +33,7 @@ body{
     align-items: center;
     height: 100px;
     width: 100%;
-    background-color: rgba(0, 0, 0, 0.2);
+    background-color: var(--var-transparent);
 }
 .logoContainer{
     display: flex;
@@ -84,11 +87,36 @@ body{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    width: 710px;
+    width: 757px;
 }
 .links{
     text-decoration: none;
     font-size: 18px;
     font-weight: 700;
     color: white;
+}
+/** FIN HEADER **/
+
+/* CONTENT */
+.contentContainer{
+    z-index: 1;
+    height: 100%;
+    margin: 100px 250px 0px;
+}
+.topContainer{
+    display: flex;
+    justify-content: space-between;
+    height: 320px;
+}
+.serverContent{
+    height: 320px;
+    width: 320px;
+    border-radius: 10px;
+    background-color: var(--var-transparent);
+}
+.loginContent{
+    height: 320px;
+    width: 420px;
+    border-radius: 10px;
+    background-color: var(--var-transparent);
 }
