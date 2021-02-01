@@ -2,6 +2,7 @@
     font-family: 'Montserrat', sans-serif;
 }
 :root{
+    --var-white: #FFF;
     --var-background: #17222B;
     --var-primaryColor: #FFC236;
     --var-transparent: rgba(0, 0, 0, 0.3);
@@ -60,7 +61,7 @@ body{
 .dataItem{
     font-size: 18px;
     font-weight: 700;
-    color: white;
+    color: var(--var-white);
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -93,7 +94,7 @@ body{
     text-decoration: none;
     font-size: 18px;
     font-weight: 700;
-    color: white;
+    color: var(--var-white);
 }
 /** FIN HEADER **/
 
@@ -108,15 +109,74 @@ body{
     justify-content: space-between;
     height: 320px;
 }
+/** SERVER **/
 .serverContent{
     height: 320px;
     width: 320px;
     border-radius: 10px;
     background-color: var(--var-transparent);
 }
+.serverPadding{
+    padding: 20px;
+}
+.serverTitle{
+    height: 60px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
+}
+.serverFont{
+    color: var(--var-white);
+    text-align: center;
+}
+.serverFont h3{
+    font-weight: 800;
+    font-size: 28px;
+    margin: 0;
+}
+.serverFont p{
+    font-size: 24px;
+    margin: 0;
+}
+.serverInfo{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 200px;
+}
+.fa-server{
+    font-size: 57px;
+    color: var(--var-white);
+}
+
+.blockdata{
+    height: 40px;
+    background-color: var(--var-transparent);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    padding-left: 10px;
+}
+.blockdata p{
+    margin: 0;
+    font-size: 24px;
+    font-weight: 300;
+    color: var(--var-white);
+}
+
+
+
+
+
+
+
 .loginContent{
     height: 320px;
     width: 420px;
     border-radius: 10px;
     background-color: var(--var-transparent);
 }
+
+
