@@ -6,6 +6,7 @@
     --var-background: #17222B;
     --var-primaryColor: #FFC236;
     --var-transparent: rgba(0, 0, 0, 0.3);
+    --var-news: #3988FF;
 }
 body{
     background-color: var(--var-background);
@@ -229,19 +230,107 @@ form .serverInfo .blockdata input{
     display: flex;
     justify-content: space-between;
     margin-top: 100px;
-    background-color: var(--var-transparent);
     height: 920px;
 }
 .noticesContainer{
     height: 100%;
     width: 965px;
-    background-color: var(--var-transparent);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 
 }
+.notice{
+    color: var(--var-white);
+    height: 200px;
+    display: flex;
+    justify-content: space-between;
+}
+.noticeImageContainer{
+    position: relative;
+    height: 200px;
+    width: 320px;
+    border-radius: 10px;
+    background-color: var(--var-primaryColor);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+.noticeImgFront{
+    width: 100%;
+    z-index: 1;
+}
+.noticeImgBack{
+    position: absolute;
+    mix-blend-mode: luminosity;
+    width: 180%;
+}
+.noticeTextContainer{
+    height: 200px;
+    width: 605px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.noticeCategory{
+    display: flex;
+    align-items: center;
+    height: 20px;
+}
+.noticeCategory p{
+    background-color: var(--var-news);
+    margin: 0px;
+    padding: 0px 10px;
+    border-radius: 10px;
+    font-size: 14px;
+    font-weight: 700;
+}
+.noticeTitle{
+    height: 58px;
+}
+.noticeTitle h3{
+    margin: 0px;
+    font-size: 24px;
+}
+.noticeText{
+    height: 51px;
+}
+.noticeText p{
+    margin: 0;
+    font-size: 14px;
+    font-weight: 300;
+}
+.noticeText a{
+    color: var(--var-primaryColor);
+    font-weight: 500;
+    text-decoration: none;
+}
+.noticeDay{
+    display: flex;
+    justify-content: flex-end;
+}
+
+
+
+
+/** BOTONES */
 .buttonsContainer{
     height: 100%;
     width: 415px;
     background-color: var(--var-transparent);
+}
+.buttons{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 515px;
+    background-color: var(--var-transparent);
+}
+.button{
+    height: 100px;
+    background-color: var(--var-primaryColor);
+    border-radius: 10px;
 }
 .separatorContainer{
     width: 1240px;
@@ -260,3 +349,4 @@ form .serverInfo .blockdata input{
     background-color: var(--var-transparent);
 
 }
+
