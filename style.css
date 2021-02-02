@@ -96,47 +96,55 @@ body{
     font-weight: 700;
     color: var(--var-white);
 }
-/** FIN HEADER **/
 
-/* CONTENT */
+/** CONTENT **/
 .contentContainer{
     z-index: 1;
     height: 100%;
     margin: 100px 250px 0px;
 }
+
+/** TOP **/
 .topContainer{
+    position: relative;
     display: flex;
     justify-content: space-between;
     height: 320px;
 }
-/** SERVER **/
 .serverContent{
     height: 320px;
     width: 320px;
     border-radius: 10px;
     background-color: var(--var-transparent);
 }
-.serverPadding{
+.serverPadding,
+.loginPadding{
     padding: 20px;
 }
-.serverTitle{
+.serverTitle,
+.loginTitle{
     height: 60px;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-
 }
-.serverFont{
+.serverFont,
+.loginFont{
     color: var(--var-white);
     text-align: center;
 }
-.serverFont h3{
+.loginFont{
+    width: 290px;
+}
+.serverFont h3,
+.loginFont h3{
     font-weight: 800;
     font-size: 28px;
     margin: 0;
 }
-.serverFont p{
+.serverFont p,
+.loginFont p{
     font-size: 24px;
     margin: 0;
 }
@@ -145,12 +153,13 @@ body{
     flex-direction: column;
     justify-content: space-between;
     height: 200px;
+    padding-top: 20px;
 }
-.fa-server{
+.fa-server,
+.fa-address-card{
     font-size: 57px;
     color: var(--var-white);
 }
-
 .blockdata{
     height: 40px;
     background-color: var(--var-transparent);
@@ -165,12 +174,16 @@ body{
     font-weight: 300;
     color: var(--var-white);
 }
-
-
-
-
-
-
+form .serverInfo .blockdata{
+    padding-left: 0px;
+}
+form .serverInfo .blockdata input{
+    border-radius: 10px;
+    border: none;
+    height: 100%;
+    width: 100%;
+    color: var(--var-white);
+}
 
 .loginContent{
     height: 320px;
@@ -178,5 +191,72 @@ body{
     border-radius: 10px;
     background-color: var(--var-transparent);
 }
+.login{
+    background-color: var(--var-primaryColor);
+    font-size: 24px;
+    font-weight: 800;
+}
+.login:hover{
+    cursor: pointer;
+}
+.forgot{
+    background: none;
+    display: flex;
+    justify-content: center;
+}
+.forgot p{
+    font-size: 18px;
+}
+.inputForm{
+    padding-left: 15px;
+    font-size: 24px;
+}
+.inputForm::placeholder{
+    font-size: 24px;
+}
+.imgContainer{
+    position: absolute;
+    height: 100%;
+}
+.imgContainer img{
+    margin-left: 420px;
+    margin-top: -60px;
+    height: 150%;
+}
 
+/** MID **/
+.midContainer{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 100px;
+    background-color: var(--var-transparent);
+    height: 920px;
+}
+.noticesContainer{
+    height: 100%;
+    width: 965px;
+    background-color: var(--var-transparent);
 
+}
+.buttonsContainer{
+    height: 100%;
+    width: 415px;
+    background-color: var(--var-transparent);
+}
+.separatorContainer{
+    width: 1240px;
+    height: 120px;
+    margin: 80px 90px;
+    background-color: var(--var-transparent);
+}
+.instancesContainer{
+    height: 620px;
+    background-color: var(--var-transparent);
+    margin-bottom: 60px;
+}
+.woeContainer{
+    width: 100%;
+    height: 660px;
+    background-color: var(--var-transparent);
+
+}
