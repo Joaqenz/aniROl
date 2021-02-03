@@ -5,8 +5,11 @@
     --var-white: #FFF;
     --var-background: #17222B;
     --var-primaryColor: #FFC236;
+    --var-secondaryColor: #D79500;
     --var-transparent: rgba(0, 0, 0, 0.3);
     --var-news: #3988FF;
+    --var-updates: #FF005C;
+    --var-events: #56EA2B;
 }
 body{
     background-color: var(--var-background);
@@ -123,7 +126,8 @@ body{
     padding: 20px;
 }
 .serverTitle,
-.loginTitle{
+.loginTitle,
+.buttonTitle{
     height: 60px;
     display: flex;
     flex-direction: row;
@@ -131,7 +135,8 @@ body{
     justify-content: space-between;
 }
 .serverFont,
-.loginFont{
+.loginFont,
+.buttonFont{
     color: var(--var-white);
     text-align: center;
 }
@@ -139,13 +144,15 @@ body{
     width: 290px;
 }
 .serverFont h3,
-.loginFont h3{
+.loginFont h3,
+.buttonFont h3{
     font-weight: 800;
     font-size: 28px;
     margin: 0;
 }
 .serverFont p,
-.loginFont p{
+.loginFont p,
+.buttonFont p{
     font-size: 24px;
     margin: 0;
 }
@@ -279,12 +286,20 @@ form .serverInfo .blockdata input{
     height: 20px;
 }
 .noticeCategory p{
-    background-color: var(--var-news);
     margin: 0px;
     padding: 0px 10px;
     border-radius: 10px;
     font-size: 14px;
     font-weight: 700;
+}
+.news p{
+    background-color: var(--var-news);
+}
+.updates p{
+    background-color: var(--var-updates);
+}
+.events p{
+    background-color: var(--var-events);
 }
 .noticeTitle{
     height: 58px;
@@ -328,9 +343,23 @@ form .serverInfo .blockdata input{
     background-color: var(--var-transparent);
 }
 .button{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
     height: 100px;
     background-color: var(--var-primaryColor);
     border-radius: 10px;
+}
+.buttonFont{
+    width: 50%;
+}
+.fa-user-plus,
+.fa-download,
+.fa-vote-yea,
+.fa-donate{
+    font-size: 57px;
+    color: var(--var-secondaryColor);
 }
 .separatorContainer{
     width: 1240px;
