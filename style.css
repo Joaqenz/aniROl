@@ -223,13 +223,14 @@ form .serverInfo .blockdata input{
     font-size: 24px;
 }
 .imgContainer{
+    top: -60px;
+    left: 420px;
     position: absolute;
     height: 100%;
 }
 .imgContainer img{
-    margin-left: 420px;
-    margin-top: -60px;
     height: 150%;
+    pointer-events: none;
 }
 
 /** MID **/
@@ -245,8 +246,8 @@ form .serverInfo .blockdata input{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-
 }
+/** NOTICES **/
 .notice{
     color: var(--var-white);
     height: 200px;
@@ -326,21 +327,19 @@ form .serverInfo .blockdata input{
     justify-content: flex-end;
 }
 
-
-
-
-/** BOTONES */
+/** BUTTONS */
 .buttonsContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     height: 100%;
     width: 415px;
-    background-color: var(--var-transparent);
 }
 .buttons{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     height: 515px;
-    background-color: var(--var-transparent);
 }
 .button{
     display: flex;
@@ -361,21 +360,204 @@ form .serverInfo .blockdata input{
     font-size: 57px;
     color: var(--var-secondaryColor);
 }
+.discord{
+    width: 414px;
+    height: 357px;
+    background-color: var(--var-transparent);
+    border-radius: 10px;
+}
+/** SEPARATOR **/
 .separatorContainer{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     width: 1240px;
     height: 120px;
     margin: 80px 90px;
-    background-color: var(--var-transparent);
 }
+.separatorData{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    width: 220px;
+    color: var(--var-white);
+}
+.separatorTitle{
+    margin: 0;
+    font-weight: 700;
+    font-size: 64px;
+    text-align: center;
+}
+.separatorLine{
+    width: 100px;
+    height: 2px;
+    background-color: var(--var-primaryColor);
+}
+.separatorText{
+    margin: 0;
+    font-weight: 100;
+    font-size: 18px;
+    text-align: center;
+}
+/** INSTANCES **/
 .instancesContainer{
-    height: 620px;
-    background-color: var(--var-transparent);
+    height: 610px;
     margin-bottom: 60px;
 }
+.instancesTop{
+    height: 120px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.instancesMainTitle{
+    color: var(--var-white);
+    font-size: 48px;
+    font-weight: 700;
+    margin: 0;
+}
+.instancesData{
+    display: flex;
+    justify-content: space-between;    
+}
+.instancesLeft{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 320px;
+    height: 490px;
+}
+.instancesOption{
+    width: 320px;
+    height: 100px;
+    background-color: var(--var-primaryColor);
+    border-radius: 10px;
+}
+.instancesRight{
+    display: flex;
+    justify-content: space-between;
+    width: 1060px;
+    height: 440px;
+}
+.instancesBox{
+    width: 325px;
+    height: 440px;
+    border-radius: 10px;
+    background-color: var(--var-transparent);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.instancesBoxHigh{
+    width: 325px;
+    height: 230px;
+    border-radius: 10px 10px 0px 0px;
+    background-color: var(--var-primaryColor);
+
+}
+.instancesBoxImgC{
+    width: 325px;
+    height: 230px;
+    border-radius: 10px 10px 0px 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    position: absolute;
+}
+.instancesImgFront{
+    width: 100%;
+    z-index: 1;
+}
+.instancesImgBack{
+    position: absolute;
+    mix-blend-mode: luminosity;
+    width: 180%;
+}
+.instancesBoxLow{
+    width: 325px;
+    height: 210px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.instancesBoxLowPadding{
+    width: 285px;
+    height: 170px;
+    color: var(--var-white);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.instancesTitle p,
+.instancesAvailable p,
+.instancesDescription p,
+.instancesRequeriments p{ 
+    margin: 0;
+}
+.instancesTitle{
+    font-size: 24px;
+}
+.instancesAvailable{
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+.instancesAvailable p{
+    width: fit-content;
+    margin: 0px;
+    padding: 0px 10px;
+    border-radius: 10px;
+    font-size: 14px;
+    font-weight: 700;
+}
+.notAvailable p{
+    background-color: var(--var-updates);
+}
+.available p{
+    background-color: var(--var-events);
+}
+.instancesDescription p{
+    font-size: 14px;
+    font-weight: 300;
+}
+.req{
+    display: flex;
+    font-size: 14px;
+}
+.req p{
+    font-weight: 700;
+}
+.req i{
+    padding-left: 10px;
+    font-weight: 300;
+    font-style: normal;
+}
+/** WOE **/
 .woeContainer{
     width: 100%;
     height: 660px;
-    background-color: var(--var-transparent);
+}
+.woeTopInformation{
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.woeBox{
+    width: 415px;
+    height: 100px;
+    background-color: var(--var-primaryColor);
+    border-radius: 10px;
+}
+.woeSvg{
+    position: absolute;
+    left: 0;
+    margin-top: -50px;
 
 }
-
