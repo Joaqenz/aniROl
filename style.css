@@ -1,5 +1,5 @@
 *{
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Montserrat', sans-serif;`
 }
 :root{
     --var-white: #FFF;
@@ -10,6 +10,10 @@
     --var-news: #3988FF;
     --var-updates: #FF005C;
     --var-events: #56EA2B;
+    --var-fontL: 300;
+    --var-fontM: 500;
+    --var-fontB: 700;
+
 }
 body{
     background-color: var(--var-background);
@@ -64,7 +68,7 @@ body{
 }
 .dataItem{
     font-size: 18px;
-    font-weight: 700;
+    font-weight: var(--var-fontB);
     color: var(--var-white);
     display: flex;
     flex-direction: row;
@@ -97,7 +101,7 @@ body{
 .links{
     text-decoration: none;
     font-size: 18px;
-    font-weight: 700;
+    font-weight: var(--var-fontB);
     color: var(--var-white);
 }
 
@@ -146,7 +150,7 @@ body{
 .serverFont h3,
 .loginFont h3,
 .buttonFont h3{
-    font-weight: 800;
+    font-weight: var(--var-fontB);
     font-size: 28px;
     margin: 0;
 }
@@ -179,7 +183,7 @@ body{
 .blockdata p{
     margin: 0;
     font-size: 24px;
-    font-weight: 300;
+    font-weight: var(--var-fontL);
     color: var(--var-white);
 }
 form .serverInfo .blockdata{
@@ -202,7 +206,7 @@ form .serverInfo .blockdata input{
 .login{
     background-color: var(--var-primaryColor);
     font-size: 24px;
-    font-weight: 800;
+    font-weight: var(--var-fontB);
 }
 .login:hover{
     cursor: pointer;
@@ -291,7 +295,7 @@ form .serverInfo .blockdata input{
     padding: 0px 10px;
     border-radius: 10px;
     font-size: 14px;
-    font-weight: 700;
+    font-weight: var(--var-fontB);
 }
 .news p{
     background-color: var(--var-news);
@@ -308,6 +312,7 @@ form .serverInfo .blockdata input{
 .noticeTitle h3{
     margin: 0px;
     font-size: 24px;
+    font-weight: var(--var-fontB);
 }
 .noticeText{
     height: 51px;
@@ -315,11 +320,11 @@ form .serverInfo .blockdata input{
 .noticeText p{
     margin: 0;
     font-size: 14px;
-    font-weight: 300;
+    font-weight: var(--var-fontL);
 }
 .noticeText a{
     color: var(--var-primaryColor);
-    font-weight: 500;
+    font-weight: var(--var-fontM);
     text-decoration: none;
 }
 .noticeDay{
@@ -386,7 +391,7 @@ form .serverInfo .blockdata input{
 }
 .separatorTitle{
     margin: 0;
-    font-weight: 700;
+    font-weight: var(--var-fontB);
     font-size: 64px;
     text-align: center;
 }
@@ -397,7 +402,7 @@ form .serverInfo .blockdata input{
 }
 .separatorText{
     margin: 0;
-    font-weight: 100;
+    font-weight: var(--var-fontL);
     font-size: 18px;
     text-align: center;
 }
@@ -416,7 +421,7 @@ form .serverInfo .blockdata input{
 .instancesMainTitle{
     color: var(--var-white);
     font-size: 48px;
-    font-weight: 700;
+    font-weight: var(--var-fontB);
     margin: 0;
 }
 .instancesData{
@@ -433,8 +438,13 @@ form .serverInfo .blockdata input{
 .instancesOption{
     width: 320px;
     height: 100px;
-    background-color: var(--var-primaryColor);
     border-radius: 10px;
+}
+.iActive{
+    background-color: var(--var-primaryColor);
+}
+.iInactive{
+    background-color: var(--var-transparent);
 }
 .instancesRight{
     display: flex;
@@ -505,7 +515,7 @@ form .serverInfo .blockdata input{
 }
 .instancesAvailable{
     font-size: 14px;
-    font-weight: 700;
+    font-weight: var(--var-fontB);
     text-transform: uppercase;
 }
 .instancesAvailable p{
@@ -514,7 +524,7 @@ form .serverInfo .blockdata input{
     padding: 0px 10px;
     border-radius: 10px;
     font-size: 14px;
-    font-weight: 700;
+    font-weight: var(--var-fontB);
 }
 .notAvailable p{
     background-color: var(--var-updates);
@@ -524,24 +534,29 @@ form .serverInfo .blockdata input{
 }
 .instancesDescription p{
     font-size: 14px;
-    font-weight: 300;
+    font-weight: var(--var-fontL);
 }
 .req{
     display: flex;
     font-size: 14px;
 }
 .req p{
-    font-weight: 700;
+    font-weight: var(--var-fontB);
 }
 .req i{
     padding-left: 10px;
-    font-weight: 300;
+    font-weight: var(--var-fontL);
     font-style: normal;
 }
 /** WOE **/
 .woeContainer{
     width: 100%;
     height: 660px;
+}
+.woeSvg{
+    position: absolute;
+    left: 0;
+    margin-top: 50px;
 }
 .woeTopInformation{
     height: 100px;
@@ -550,14 +565,165 @@ form .serverInfo .blockdata input{
     align-items: center;
 }
 .woeBox{
+    z-index: 1;
     width: 415px;
     height: 100px;
+    display: flex;
     background-color: var(--var-primaryColor);
     border-radius: 10px;
 }
-.woeSvg{
-    position: absolute;
-    left: 0;
-    margin-top: -50px;
+.woeShieldContainer{
+    width: 100px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.woeShield{
+    width: 65px;
+    height: 65px;
+    border-radius: 50%;
+    background-color: var(--var-background);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.fa-shield-alt{
+    color: var(--var-white);
+    font-size: 30px;
+    margin-left: 2px;
+    margin-top: 2px;
+}
+.woeTextContainer{
+    width: 315px;
+    color: var(--var-white);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.woeCalendar{
+    margin: 0;
+    font-weight: var(--var-fontB);
+    font-size: 24px;
+}
+.woeTime{
+    margin: 0;
+    font-weight: var(--var-fontL);
+    font-size: 24px;
+}
+.woeLowInformation{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 20px;
+}
+.woeLeft{
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-right: 50px;
+    color: var(--var-white);
+}
+.woeTitle{
+    font-weight: var(--var-fontM);
+    color: var(--var-white);
+    font-size: 48px;
+    margin: 0;
+}
+.woeTitle i,
+.woeSubtitle i{
+    font-weight: var(--var-fontB);
+    margin: 0;
+    font-style: normal;
+}
+.woeSubtitle{
+    font-size: 24px;
+    width: 480px;
+    text-align: center;
+}
+.woeRight{
+    z-index: 1;
+    color: var(--var-white);
+    padding-left: 50px;
+}
+.woeNext{
+    margin: 0;
+    font-size: 48px;
+}
+.woeName{
+    margin: 0;
+    font-size: 95px;
+}
 
+.woeCounter{
+    width: 460;
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.woeCounterBox{
+    width: 100px;
+    height: 100px;
+    background-color: var(--var-background);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.counterBoxTitle{
+    margin: 0;
+    font-size: 48px;
+    font-weight: var(--var-fontB);
+}
+.counterBoxSubtitle{
+    margin: 0;
+    font-size: 18px;
+    font-weight: var(--var-fontL);
+    text-align: center;
+}
+.footerContainer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 510px;
+}
+.footerInside{
+    height: 390px;
+    width: 700px;
+    display: flex;
+    flex-direction: column;
+}
+.footerColumns,
+.footerLogo{
+    display: flex;
+    align-items: center;
+}
+.footerColumns{
+    justify-content: space-between;
+}
+.footerLogo{
+    justify-content: center;
+    height: 90px;
+    width: 100%;
+}
+.footerColumn{
+    height: 300px;
+    width: 200px;
+}
+.footerColumn ul{
+    list-style: none;
+    text-align: center;
+    color: var(--var-white);
+    margin: 0;
+    padding-left: 0;
+    font-size: 18px;
+}
+.footerColumn ul h3{
+    color: var(--var-primaryColor);
+}
+.footerColumn ul li{
+    padding-bottom: 15px;
 }
