@@ -93,18 +93,38 @@ body{
     width: auto;
 }
 .linkPosition{
+    width: 757px;
+}
+.linkPosition ul{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    width: 757px;
+    list-style: none;
 }
 .links{
     text-decoration: none;
     font-size: 18px;
     font-weight: var(--var-fontB);
     color: var(--var-white);
+    position: relative;
 }
-
+.links:after {
+    background: var(--var-primaryColor);
+    content: '';
+    display: inline-block;
+    height: 2px;
+    margin: auto;
+    position: absolute;
+    bottom: -5px; left: 0; right: 0;
+    transition: all 300ms;
+    width: 0%;
+}
+.links:hover{
+    color: var(--var-primaryColor);
+}
+.links:hover:after{
+    width: 100%;
+}
 /** CONTENT **/
 .contentContainer{
     z-index: 1;
@@ -292,7 +312,7 @@ form .serverInfo .blockdata input{
 }
 .noticeCategory p{
     margin: 0px;
-    padding: 0px 10px;
+    padding: 2px 10px;
     border-radius: 10px;
     font-size: 14px;
     font-weight: var(--var-fontB);
@@ -439,18 +459,37 @@ form .serverInfo .blockdata input{
     width: 320px;
     height: 100px;
     border-radius: 10px;
+    background-color: var(--var-transparent);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.instancesOption h3{
+    text-transform: uppercase;
+    color: var(--var-white);
+    margin: 0;
 }
 .iActive{
     background-color: var(--var-primaryColor);
+    transition: 1s;
 }
-.iInactive{
-    background-color: var(--var-transparent);
-}
-.instancesRight{
+.instancesRightBox{
     display: flex;
     justify-content: space-between;
     width: 1060px;
     height: 440px;
+}
+.instances1,
+.instances2,
+.instances3,
+.instances4{
+    width: 100%;
+    display: none;
+    justify-content: space-between;
+    transition: 1s;
+}
+.iBoxActive{
+    display: flex;
 }
 .instancesBox{
     width: 325px;
@@ -521,7 +560,7 @@ form .serverInfo .blockdata input{
 .instancesAvailable p{
     width: fit-content;
     margin: 0px;
-    padding: 0px 10px;
+    padding: 2px 10px;
     border-radius: 10px;
     font-size: 14px;
     font-weight: var(--var-fontB);
