@@ -276,7 +276,9 @@ form .serverInfo .blockdata input{
     color: var(--var-white);
     height: 200px;
     display: flex;
-    justify-content: space-between;
+}
+.notice:hover{
+    cursor: pointer;
 }
 .noticeImageContainer{
     position: relative;
@@ -288,6 +290,7 @@ form .serverInfo .blockdata input{
     justify-content: center;
     align-items: center;
     overflow: hidden;
+    margin-right: 10px;
 }
 .noticeImgFront{
     width: 100%;
@@ -375,6 +378,9 @@ form .serverInfo .blockdata input{
     background-color: var(--var-primaryColor);
     border-radius: 10px;
 }
+.button:hover{
+    cursor: pointer;
+}
 .buttonFont{
     width: 50%;
 }
@@ -454,6 +460,7 @@ form .serverInfo .blockdata input{
     justify-content: space-between;
     width: 320px;
     height: 490px;
+    margin-right: 20px;
 }
 .instancesOption{
     width: 320px;
@@ -463,6 +470,9 @@ form .serverInfo .blockdata input{
     display: flex;
     align-items: center;
     justify-content: center;
+}
+.instancesOption:hover{
+    cursor: pointer;
 }
 .instancesOption h3{
     text-transform: uppercase;
@@ -486,10 +496,10 @@ form .serverInfo .blockdata input{
     width: 100%;
     display: none;
     justify-content: space-between;
-    transition: 1s;
 }
 .iBoxActive{
     display: flex;
+    transition: ease-in 2s;
 }
 .instancesBox{
     width: 325px;
@@ -499,6 +509,9 @@ form .serverInfo .blockdata input{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+}
+.instancesBox2{
+    visibility: hidden;
 }
 .instancesBoxHigh{
     width: 325px;
@@ -765,4 +778,8 @@ form .serverInfo .blockdata input{
 }
 .footerColumn ul li{
     padding-bottom: 15px;
+}
+.footerColumn ul li a{
+    text-decoration: none;
+    color: var(--var-white);
 }

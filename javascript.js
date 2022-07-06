@@ -18,7 +18,7 @@ btn1.addEventListener('click', function(){
         instances3.classList.remove('iBoxActive')
         instances4.classList.remove('iBoxActive')
     }
-}); 
+});             
 btn2.addEventListener('click', function(){
     this.classList.add('iActive')
     instances2.classList.add('iBoxActive')
